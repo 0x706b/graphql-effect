@@ -1,0 +1,22 @@
+{
+   "extends": "../../tsconfig.json",
+   "compilerOptions": {
+      "outDir": "dist",
+      "module": "esnext",
+      "incremental": true,
+      "tsBuildInfoFile": "tsbuildinfo/esm.tsbuildinfo",
+      "plugins": [
+         {
+            "transform": "@0x706b/ts-transform-esm-specifier",
+            "after": true
+         },
+         {
+            "transform": "@0x706b/ts-transform-cjs-import",
+            "after": true
+         }
+      ]
+   },
+   "include": ["source/**/*"],
+   "exclude": ["node_modules", "test", "build"]
+}
+

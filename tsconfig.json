@@ -1,0 +1,21 @@
+{
+   "compilerOptions": {
+      "target": "es2019",
+      "strict": true,
+      "noErrorTruncation": true,
+      "noEmitOnError": false,
+      "suppressImplicitAnyIndexErrors": true,
+      "noEmit": false,
+      "moduleResolution": "node",
+      "inlineSourceMap": true,
+      "declaration": true,
+      "esModuleInterop": true,
+      "lib": ["es2019"],
+      "baseUrl": ".",
+      "paths": {
+         "@graphql-effect/core": ["packages/core/dist"],
+         "@graphql-effect/core/*": ["packages/core/dist/*"]
+      }
+   },
+   "exclude": ["build", "node_modules"]
+}

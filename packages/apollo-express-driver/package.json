@@ -1,10 +1,21 @@
 {
    "name": "@graphql-effect/apollo-express-driver",
-   "version": "0.0.5",
+   "version": "0.0.7",
    "description": "Code-first GraphQL with effect-ts",
    "repository": "git://github.com/0x706b/graphql-effect",
    "license": "MIT",
    "author": "Peter Krol <peter@peterkrol.com>",
+   "type": "module",
+   "exports": {
+      ".": {
+         "import": "./dist/index.js",
+         "require": "./dist/commonjs/index.js"
+      },
+      "./": {
+         "import": "./dist/",
+         "require": "./dist/commonjs/"
+      }
+   },
    "scripts": {
       "build:test": "ttsc --build ./test/tsconfig.json",
       "build:esm": "ttsc --build ./tsconfig.esm.json",
@@ -20,16 +31,16 @@
       "publish:package": "yarn version && yarn build && yarn publish dist"
    },
    "dependencies": {
-      "@0x706b/convenience-ts": "^0.0.1",
+      "@0x706b/convenience-ts": "^0.0.2",
       "@0x706b/effect-ts-express": "^0.0.3",
-      "@graphql-effect/core": "^0.0.2",
+      "@graphql-effect/core": "^0.0.4",
       "apollo-server-express": "^2.16.1",
       "express": "^4.17.1",
       "fp-ts": "^2.8.1",
       "io-ts": "^2.2.10"
    },
    "devDependencies": {
-      "@0x706b/ts-transform-cjs-import": "^0.1.6",
+      "@0x706b/ts-transform-cjs-import": "^0.1.7",
       "@0x706b/ts-transform-esm-specifier": "^0.1.13",
       "@effect-ts/core": "^0.0.5",
       "@types/node": "^14.6.0",

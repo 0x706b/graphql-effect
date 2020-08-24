@@ -1,0 +1,6 @@
+dist
+build
+.ultra.cache.json
+.vscode
+tsbuildinfo
+node_modules

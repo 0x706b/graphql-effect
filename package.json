@@ -13,8 +13,7 @@
       "build": "ultra -r build",
       "lint": "ultra -r lint",
       "test": "ultra -r test",
-      "clean": "ultra -r clean",
-      "publish:packages": "ultra -r publish:package"
+      "clean": "ultra -r clean"
    },
    "devDependencies": {
       "@types/jest": "^26.0.10",
@@ -30,7 +29,7 @@
       "eslint-plugin-sort-keys-fix": "^1.1.1",
       "eslint-plugin-typescript-sort-keys": "^1.3.0",
       "fp-ts": "^2.8.1",
-      "jest": "^26.4.1",
+      "jest": "^26.4.2",
       "prettier": "^2.0.5",
       "rimraf": "^3.0.2",
       "sort-package-json": "^1.44.0",
