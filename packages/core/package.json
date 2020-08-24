@@ -1,0 +1,53 @@
+{
+   "name": "@graphql-effect/core",
+   "version": "0.0.3",
+   "description": "Code-first GraphQL with effect-ts",
+   "repository": "git://github.com/0x706b/graphql-effect",
+   "license": "MIT",
+   "author": "Peter Krol <peter@peterkrol.com>",
+   "private": false,
+   "exports": {
+      ".": {
+         "import": "./dist/index.js",
+         "require": "./dist/commonjs/index.js"
+      },
+      "./lib/": {
+         "import": "./dist/",
+         "require": "./dist/commonjs/"
+      }
+   },
+   "main": "dist/index.js",
+   "types": "dist/index.d.ts",
+   "scripts": {
+      "build:test": "ttsc --build ./test/tsconfig.json",
+      "build:esm": "ttsc --build ./tsconfig.esm.json",
+      "build:cjs": "ttsc --build ./tsconfig.cjs.json",
+      "build": "yarn build:esm && yarn build:cjs && ts-node ../../scripts/package.ts && yarn build:postprocess",
+      "build:postprocess": "yarn prettier && yarn sort-package-json ./dist/package.json",
+      "test": "yarn clean:test && yarn build:test && jest build/test",
+      "clean:test": "rimraf build",
+      "clean": "rimraf dist tsbuildinfo",
+      "prettier": "prettier --write --config ../../.prettierrc.json ./dist",
+      "lint": "eslint .",
+      "prepublish": "yarn build",
+      "publish:package": "yarn version && yarn build && yarn publish dist"
+   },
+   "dependencies": {
+      "@0x706b/convenience-ts": "^0.0.1",
+      "fp-ts": "^2.8.1",
+      "graphql-tools": "^6.0.18",
+      "io-ts": "^2.2.10",
+      "ts-toolbelt": "^8.0.3"
+   },
+   "devDependencies": {
+      "@0x706b/ts-transform-cjs-import": "^0.1.6",
+      "@0x706b/ts-transform-esm-specifier": "^0.1.13",
+      "@effect-ts/core": "^0.0.5",
+      "@types/node": "^14.6.0",
+      "graphql": "^15.3.0"
+   },
+   "peerDependencies": {
+      "@effect-ts/core": "^0.0.5",
+      "graphql": "^15.3.0"
+   }
+}
