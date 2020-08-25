@@ -1,17 +1,10 @@
 {
-   "extends": "../tsconfig.base.json",
+   "extends": "../../tsconfig.json",
    "compilerOptions": {
       "module": "commonjs",
       "composite": true,
-      "outDir": "../build",
-      "baseUrl": "../",
-      "rootDir": "../",
-      "plugins": [
-         {
-            "transform": "@zerollup/ts-transform-paths",
-            "exclude": ["*"]
-         }
-      ]
+      "outDir": "build"
    },
-   "exclude": ["build", "dist"]
+   "include": ["source", "test"],
+   "exclude": ["build", "dist", "node_modules"]
 }

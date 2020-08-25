@@ -8,15 +8,16 @@
       "plugins": [
          {
             "transform": "@0x706b/ts-transform-esm-specifier",
-            "after": true
+            "after": true,
+            "relativeProjectRoot": "../../"
          },
          {
             "transform": "@0x706b/ts-transform-cjs-import",
-            "after": true
+            "after": true,
+            "relativeProjectRoot": "../../"
          }
       ]
    },
-   "include": ["source/**/*"],
-   "exclude": ["node_modules", "test", "build"]
+   "exclude": ["node_modules", "test", "build"],
+   "include": ["source"]
 }
-

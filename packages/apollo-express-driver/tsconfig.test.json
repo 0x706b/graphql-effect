@@ -1,11 +1,9 @@
 {
-   "extends": "../tsconfig.base.json",
+   "extends": "../../tsconfig.json",
    "compilerOptions": {
       "module": "commonjs",
-      "composite": true,
-      "outDir": "../build",
-      "baseUrl": "../",
-      "rootDir": "../"
+      "outDir": "build"
    },
-   "exclude": ["build", "dist"]
+   "include": ["source", "test"],
+   "exclude": ["build", "dist", "node_modules"]
 }

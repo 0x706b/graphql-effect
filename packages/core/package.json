@@ -28,7 +28,7 @@
       "lint": "eslint .",
       "prettier": "prettier --write --config ../../.prettierrc.json ./dist",
       "prepublish": "yarn build",
-      "publish:package": "yarn version && yarn build && yarn publish dist",
+      "publish:package": "yarn version --no-git-tag-version && yarn build && yarn publish dist",
       "test": "yarn clean:test && yarn build:test && jest build/test"
    },
    "dependencies": {
