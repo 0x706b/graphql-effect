@@ -1,6 +1,6 @@
 {
    "name": "@graphql-effect/core",
-   "version": "0.0.5",
+   "version": "0.0.6",
    "private": false,
    "description": "Code-first GraphQL with effect-ts",
    "repository": "git://github.com/0x706b/graphql-effect",
@@ -32,7 +32,7 @@
       "test": "yarn clean:test && yarn build:test && jest build/test"
    },
    "dependencies": {
-      "@0x706b/convenience-ts": "^0.0.2",
+      "@0x706b/convenience-ts": "~0",
       "fp-ts": "^2.8.2",
       "graphql-tools": "^6.0.18",
       "io-ts": "^2.2.10",
