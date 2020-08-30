@@ -34,19 +34,18 @@
    "dependencies": {
       "@0x706b/convenience-ts": "~0",
       "fp-ts": "^2.8.2",
-      "graphql-tools": "^6.0.18",
+      "graphql-tools": "^6.1.0",
       "io-ts": "^2.2.10",
-      "ts-toolbelt": "^8.0.3"
+      "ts-toolbelt": "^8.0.4"
    },
    "devDependencies": {
-      "@0x706b/ts-transform-cjs-import": "^0.1.8",
-      "@0x706b/ts-transform-esm-specifier": "^0.1.14",
-      "@effect-ts/core": "^0.0.5",
-      "@types/node": "^14.6.0",
+      "@0x706b/ts-transform-fix-esm": "^0.0.3",
+      "@effect-ts/core": "^0.0.6",
+      "@types/node": "^14.6.2",
       "graphql": "^15.3.0"
    },
    "peerDependencies": {
-      "@effect-ts/core": "^0.0.5",
+      "@effect-ts/core": "^0.0.6",
       "graphql": "^15.3.0"
    }
 }

@@ -34,21 +34,20 @@
       "@0x706b/convenience-ts": "~0",
       "@0x706b/effect-ts-express": "~0",
       "@graphql-effect/core": "~0",
-      "apollo-server-express": "^2.16.1",
+      "apollo-server-express": "^2.17.0",
       "express": "^4.17.1",
       "fp-ts": "^2.8.2",
       "io-ts": "^2.2.10"
    },
    "devDependencies": {
-      "@0x706b/ts-transform-cjs-import": "^0.1.8",
-      "@0x706b/ts-transform-esm-specifier": "^0.1.14",
-      "@effect-ts/core": "^0.0.5",
-      "@types/node": "^14.6.0",
+      "@0x706b/ts-transform-fix-esm": "^0.0.3",
+      "@effect-ts/core": "^0.0.6",
+      "@types/node": "^14.6.2",
       "@zerollup/ts-transform-paths": "^1.7.18",
       "graphql": "^15.3.0"
    },
    "peerDependencies": {
-      "@effect-ts/core": "^0.0.5",
+      "@effect-ts/core": "^0.0.6",
       "graphql": "^15.3.0"
    }
 }

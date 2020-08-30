@@ -7,12 +7,7 @@
       "tsBuildInfoFile": "tsbuildinfo/esm.tsbuildinfo",
       "plugins": [
          {
-            "transform": "@0x706b/ts-transform-esm-specifier",
-            "after": true,
-            "relativeProjectRoot": "../../"
-         },
-         {
-            "transform": "@0x706b/ts-transform-cjs-import",
+            "transform": "@0x706b/ts-transform-fix-esm",
             "after": true,
             "relativeProjectRoot": "../../"
          }
