@@ -2,22 +2,22 @@
 # yarn lockfile v1
 
 
-"@0x706b/convenience-ts@~0":
+"@0x706b/convenience-ts@latest":
   version "0.0.19"
   resolved "https://registry.yarnpkg.com/@0x706b/convenience-ts/-/convenience-ts-0.0.19.tgz#c2452be0335dfc238b6f56c1e313c37aa803f526"
   integrity sha512-8nOfEi2jrKsRxuUP3bw5Vo2WMkrPibvwvXDaxITEmXp7EydtY+Y4Q7K67+5eX/e+Ox5zMIFqNfL3Rv1Mwpkaww==
   dependencies:
     uuid "^8.3.0"
 
-"@0x706b/effect-ts-express@~0":
+"@0x706b/effect-ts-express@latest":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@0x706b/effect-ts-express/-/effect-ts-express-0.0.3.tgz#1e76a2c4d599d5c8209a9661aa6f51371c81b802"
   integrity sha512-Vy6VF3drVHfiy3Z1x9RgkW5CVM8yUcYAVwOQl6B3gqjAtSZlAiS537iIaSISAtp/WbjAkdSX5h4CNQ0c1jP7Dg==
 
-"@0x706b/ts-transform-fix-esm@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@0x706b/ts-transform-fix-esm/-/ts-transform-fix-esm-0.0.3.tgz#a23f8ef7efecc0382bc60ed9ba6a06b391001e4d"
-  integrity sha512-NV0LdjvAO4lE0Nuyh0Fn0HoI2tBIlovwHaXP8Uq7U6nbec7kt46267uq+o1ZbzKuVnZHQWoIsshxqR3fErRQMg==
+"@0x706b/ts-transform-fix-esm@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@0x706b/ts-transform-fix-esm/-/ts-transform-fix-esm-0.0.8.tgz#30ce6220d21bac36bfe08dffd0b0a6f20b578c0e"
+  integrity sha512-Q2KKDFegGmbfvs5L7HLIktiIowDnzt2/AnrhXbwgN/8Eo44RlNt/4On+7N/ShlaFEGvdNrFdYqsHkE5IIe02Ag==
   dependencies:
     fp-ts "^2.8.2"
 
@@ -607,6 +607,17 @@
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@effect-ts/system/-/system-0.0.2.tgz#87b5ee805df640d03ba2c53daf8eebb7f6402596"
   integrity sha512-T1gSCGl2FY6UNLVtBqlzqAZH2UZVR01y6pYAN0eDpbyB2Kk1NfaLNVT7JfM1E2k2gFTJNnoIx5NRKAcEGGstaw==
+
+"@graphql-effect/core@latest":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@graphql-effect/core/-/core-0.0.7.tgz#03e357b851999b762ea611dbc05dabefe3e8cfb2"
+  integrity sha512-ja6bqMCrFgnhdsi2DFGhHrh1DmwZLnsgaijsJWwcdaFF/Iuw3wqonRW0PBZrxyxizw3xOKxXim0qBmBvk7v1Ug==
+  dependencies:
+    "@0x706b/convenience-ts" latest
+    fp-ts "^2.8.2"
+    graphql-tools "^6.1.0"
+    io-ts "^2.2.10"
+    ts-toolbelt "^8.0.4"
 
 "@graphql-tools/batch-delegate@6.1.0":
   version "6.1.0"
