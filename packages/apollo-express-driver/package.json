@@ -31,9 +31,9 @@
       "test": "yarn clean:test && yarn build:test && jest build/test"
    },
    "dependencies": {
-      "@0x706b/convenience-ts": "~0",
-      "@0x706b/effect-ts-express": "~0",
-      "@graphql-effect/core": "~0",
+      "@0x706b/convenience-ts": "latest",
+      "@0x706b/effect-ts-express": "latest",
+      "@graphql-effect/core": "latest",
       "apollo-server-express": "^2.17.0",
       "express": "^4.17.1",
       "fp-ts": "^2.8.2",

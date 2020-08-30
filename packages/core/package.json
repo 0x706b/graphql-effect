@@ -32,7 +32,7 @@
       "test": "yarn clean:test && yarn build:test && jest build/test"
    },
    "dependencies": {
-      "@0x706b/convenience-ts": "~0",
+      "@0x706b/convenience-ts": "latest",
       "fp-ts": "^2.8.2",
       "graphql-tools": "^6.1.0",
       "io-ts": "^2.2.10",
