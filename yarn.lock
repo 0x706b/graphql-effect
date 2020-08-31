@@ -14,10 +14,10 @@
   resolved "https://registry.yarnpkg.com/@0x706b/effect-ts-express/-/effect-ts-express-0.0.3.tgz#1e76a2c4d599d5c8209a9661aa6f51371c81b802"
   integrity sha512-Vy6VF3drVHfiy3Z1x9RgkW5CVM8yUcYAVwOQl6B3gqjAtSZlAiS537iIaSISAtp/WbjAkdSX5h4CNQ0c1jP7Dg==
 
-"@0x706b/ts-transform-fix-esm@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@0x706b/ts-transform-fix-esm/-/ts-transform-fix-esm-0.0.10.tgz#4c812365d32b2e2166bafe4c50af40f0c34e8354"
-  integrity sha512-u5+K5oY+U26wJulxHY1b0mhj9ewS58UUSxFx73oTj2Okwkb76zcd2t0wdSvodH5hRnT3DKr2clSnaz8HkjyUNA==
+"@0x706b/ts-transform-fix-esm@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@0x706b/ts-transform-fix-esm/-/ts-transform-fix-esm-0.0.11.tgz#c6901cd3dc196ca45fd79a4e5ccdffc8877f97df"
+  integrity sha512-x+oBGQwmhs8wqGpANqL8ZTQLIBuMj/o0Ai/z9H9JFHySe8pkhvyKwT5uJFdgP+A21VQJDfPyq2T4rVs1qY/20w==
   dependencies:
     fp-ts "^2.8.2"
 

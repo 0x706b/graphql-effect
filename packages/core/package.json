@@ -39,7 +39,7 @@
       "ts-toolbelt": "^8.0.4"
    },
    "devDependencies": {
-      "@0x706b/ts-transform-fix-esm": "^0.0.10",
+      "@0x706b/ts-transform-fix-esm": "^0.0.11",
       "@effect-ts/core": "^0.0.6",
       "@types/node": "^14.6.2",
       "graphql": "^15.3.0"
