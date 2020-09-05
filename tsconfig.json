@@ -1,17 +1,15 @@
 {
    "compilerOptions": {
-      "target": "es2019",
+      "target": "es2020",
+      "lib": ["es2020"],
       "strict": true,
+      "declaration": true,
       "noErrorTruncation": true,
       "noEmitOnError": false,
       "suppressImplicitAnyIndexErrors": true,
       "noEmit": false,
       "moduleResolution": "node",
-      "sourceMap": true,
-      "declarationMap": true,
-      "declaration": true,
       "esModuleInterop": true,
-      "lib": ["es2019"],
       "baseUrl": ".",
       "paths": {
          "@graphql-effect/core": ["packages/core/dist"],

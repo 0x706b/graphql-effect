@@ -1,38 +1,45 @@
 {
    "name": "@graphql-effect/core",
-   "version": "0.0.9",
+   "version": "0.0.12",
    "private": false,
    "description": "Code-first GraphQL with effect-ts",
    "repository": "git://github.com/0x706b/graphql-effect",
    "license": "MIT",
    "author": "Peter Krol <peter@peterkrol.com>",
-   "type": "module",
    "exports": {
       ".": {
-         "import": "./index.js",
-         "require": "./commonjs/index.js"
+         "import": "./dist/_dist_/esm-fix/index.js",
+         "require": "./dist/_dist_/cjs/index.js"
       },
       "./": {
-         "import": "./",
-         "require": "./commonjs/"
+         "import": "./dist/_dist_/esm-fix/",
+         "require": "./dist/_dist_/cjs/"
       }
    },
+   "main": "dist/_dist_/cjs/index.js",
+   "module": "./dist/_dist_/esm-shake/index.js",
+   "types": "dist/index.d.ts",
    "scripts": {
-      "build": "yarn build:esm && yarn build:cjs && ts-node ../../scripts/package.ts && yarn build:postprocess",
-      "build:cjs": "ttsc --build ./tsconfig.cjs.json",
-      "build:esm": "ttsc --build ./tsconfig.esm.json",
-      "build:postprocess": "yarn prettier && yarn sort-package-json ./dist/package.json",
-      "build:test": "ttsc --build ./tsconfig.test.json",
-      "clean": "rimraf dist tsbuildinfo",
+      "autofix": "yarn lint --fix",
+      "build": "yarn build:types && yarn build:esm-fix && yarn build:intermediary && yarn build:esm-shake && yarn build:cjs && yarn build:postprocess",
+      "build:intermediary": "ttsc --build ./config/tsconfig.intermediary.json",
+      "build:cjs": "babel --config-file ./config/cjs.babelrc.json --extensions '.js' --source-maps true --out-dir dist/_dist_/cjs dist/_dist_/.intermediary",
+      "build:esm-shake": "babel --config-file ./config/esm.babelrc.json --extensions '.js' --source-maps true --out-dir dist/_dist_/esm-shake dist/_dist_/.intermediary",
+      "build:esm-fix": "ttsc --build ./config/tsconfig.esm-fix.json",
+      "build:postprocess": "ts-node ../../scripts/rewrite-source-maps.ts && ts-node ../../scripts/package.ts && rimraf dist/_dist_/.intermediary && prettier --write ./dist && yarn sort-package-json ./dist/package.json",
+      "build:test": "ttsc --build ./config/tsconfig.test.json --verbose",
+      "build:types": "ttsc --build ./config/tsconfig.types.json --verbose",
+      "clean": "rimraf dist build tsbuildinfo",
       "clean:test": "rimraf build",
+      "format": "prettier --write ./source",
       "lint": "eslint .",
-      "prettier": "prettier --write --config ../../.prettierrc.json ./dist",
       "prepublish": "yarn build",
-      "publish:package": "yarn version --no-git-tag-version && yarn build && yarn publish dist",
-      "test": "yarn clean:test && yarn build:test && jest build/test"
+      "publish:package": "yarn version --no-git-tag-version && yarn clean && yarn build && yarn publish --no-git-tag-version dist",
+      "test": "yarn build:test && jest build/test"
    },
    "dependencies": {
       "@0x706b/convenience-ts": "latest",
+      "core-js": "3",
       "fp-ts": "^2.8.2",
       "graphql-tools": "^6.1.0",
       "io-ts": "^2.2.10",

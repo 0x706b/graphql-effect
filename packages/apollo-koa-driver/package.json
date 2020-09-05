@@ -1,6 +1,6 @@
 {
-   "name": "@graphql-effect/apollo-express-driver",
-   "version": "0.0.17",
+   "name": "@graphql-effect/apollo-koa-driver",
+   "version": "0.0.4",
    "description": "Code-first GraphQL with effect-ts",
    "repository": "git://github.com/0x706b/graphql-effect",
    "license": "MIT",
@@ -38,13 +38,13 @@
    },
    "dependencies": {
       "@0x706b/convenience-ts": "latest",
-      "@0x706b/effect-ts-express": "latest",
+      "@0x706b/effect-ts-koa": "^0.0.3",
       "@graphql-effect/core": "latest",
-      "apollo-server-express": "^2.17.0",
+      "apollo-server-koa": "^2.17.0",
       "core-js": "3",
-      "express": "^4.17.1",
       "fp-ts": "^2.8.2",
-      "io-ts": "^2.2.10"
+      "io-ts": "^2.2.10",
+      "koa": "^2.13.0"
    },
    "devDependencies": {
       "@0x706b/ts-transform-fix-esm": "^0.0.11",
